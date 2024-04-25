@@ -8,11 +8,11 @@ third thought: move through the array add to a hashmap
 append each element to hash map and count as value if there's any values greater than zero, 
 they are duplicates and we'll remove them
 '''
-def refine(src):
-    input_as_set = set()
+def refine(src: list[str]) -> list[str]:
+    input_as_set: set[str] = set()
     for each in src:
         input_as_set.add(each)
-    output = []
+    output: list[str] = []
     for each in input_as_set:
         output.append(each.upper())
     output.sort()

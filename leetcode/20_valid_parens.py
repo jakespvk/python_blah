@@ -13,7 +13,6 @@ def isValid(s: str) -> bool:
         
     open_parens_w_indices = sorted(open_parens_w_indices.keys())
 
+    return False
+
 print(isValid(s))
-
-
-
