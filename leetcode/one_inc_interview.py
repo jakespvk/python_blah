@@ -17,6 +17,24 @@ def refine(src: list[str]) -> list[str]:
         output.append(each.upper())
     output.sort()
     return output
+
+def refine_fun(src: list[str]) -> list[str]:
+    input_as_map: dict[str, int] = {}
+    for each in src:
+        input_as_map[each.upper()] = 1
+    return list(sorted(input_as_map.keys()))
+    
     
 result = refine(arr)
 print(result)
+print(refine_fun(arr))
+
+# FINALLY GOT THE FUN ONE WORKING PROPERLY WITH MINIMAL SPACE USED
+'''
+def refine_fun(src: list[str]) -> list[str]:
+    input_as_map: dict[str, int] = {}
+    for each in src:
+        input_as_map[each.upper()] = 1
+    return list(sorted(input_as_map.keys()))
+'''
+# pasting here in case i decide to change it in the future :)
