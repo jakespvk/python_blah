@@ -24,5 +24,3 @@ def __main__():
         print("Invalid password! Please try again.")
         PASSWORD = input("Password: ")
     print("Welcome, " + USERNAME + "!")
-
-__main__()
