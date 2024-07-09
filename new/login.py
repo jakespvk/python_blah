@@ -19,3 +19,12 @@ def login():
         print("Invalid password! Please try again.")
         PASSWORD = input("Password: ")
     print("Welcome, " + USERNAME + "!")
+
+def login(username):
+    USERNAME = username
+    print("Please enter your password below.")
+    PASSWORD = input("Password: ")
+    while not PASSWORD == logins[USERNAME]:
+        print("Invalid password! Please try again.")
+        PASSWORD = input("Password: ")
+    print("Welcome, " + USERNAME + "!")
