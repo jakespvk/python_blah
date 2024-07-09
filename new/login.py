@@ -1,26 +1,21 @@
 USERNAME = ""
 PASSWORD = ""
 
+logins = {"jspievak": "    ", "kimmy": "1111"}
 def check_username(username):
-    if username.lower() == "jspievak":
-        return True
-    else:
-        return False
+    return username.lower() in logins.keys()
 
 def check_password(password):
-    if password == "    ":
-        return True
-    else:
-        return False
+    return password == str(logins[USERNAME])
 
-def __main__():
+def login():
     print("Please login below.")
-    USERNAME = input("Username: ")
-    while not check_username(USERNAME):
+    USERNAME = input("Username: ").lower()
+    while not USERNAME in logins:
         print("Invalid username! Please try again.")
         USERNAME = input("Username: ")
     PASSWORD = input("Password: ")
-    while not check_password(PASSWORD):
+    while not PASSWORD == logins[USERNAME]:
         print("Invalid password! Please try again.")
         PASSWORD = input("Password: ")
     print("Welcome, " + USERNAME + "!")
